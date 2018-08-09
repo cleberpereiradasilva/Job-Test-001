@@ -39,7 +39,7 @@ class Home extends Component {
           const products = res.data.results;
 
           let breadcrumbs = ''        
-          if(res.data.filters > 0){
+          if(res.data.filters[0] !== undefined){
             breadcrumbs = res.data.filters[0].values[0].path_from_root.map(
           		  item => item.name).join(' > ');  
           }                      
