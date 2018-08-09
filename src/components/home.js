@@ -34,7 +34,7 @@ class Home extends Component {
   getSearch(value) {    
     if(value !== undefined)    
      
-      axios.get(`${this.URL}${value}&offset=0&limit=${this.state.maxProducts}`)
+      axios.get(`${this.URL}${value}`)
         .then(res => {
           const products = res.data.results;
 

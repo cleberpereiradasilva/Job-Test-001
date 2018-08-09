@@ -24,7 +24,7 @@ function getUrl(url,callback){
 
 
 app.get('/api/items', function(req, res){          
-    const url = 'https://api.mercadolibre.com/sites/MLA/search?q='+req.query.q+'&offset='+req.query.offset+'&limit='+req.query.limit
+    const url = 'https://api.mercadolibre.com/sites/MLA/search?q='+req.query.q+'&offset=0&limit=4'
     getUrl(url,(body) =>{
       res.json(body)
     });
